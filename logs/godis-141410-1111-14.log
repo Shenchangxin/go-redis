@@ -1,0 +1,13 @@
+[INFO][server.go:33] 2023/11/14 22:16:03 start listen
+[INFO][server.go:56] 2023/11/14 22:17:11 accepted link
+[INFO][server.go:56] 2023/11/14 22:17:11 accepted link
+[WARN][echo.go:51] 2023/11/14 22:17:11 read tcp [::1]:6379->[::1]:57909: wsarecv: An established connection was aborted by the software in your host machine.
+[INFO][echo.go:48] 2023/11/14 22:17:12 Connection close
+[INFO][server.go:56] 2023/11/14 22:17:12 accepted link
+[WARN][echo.go:51] 2023/11/14 22:17:12 read tcp [::1]:6379->[::1]:57913: wsarecv: An established connection was aborted by the software in your host machine.
+[INFO][server.go:56] 2023/11/14 22:17:12 accepted link
+[INFO][server.go:56] 2023/11/14 22:17:12 accepted link
+[INFO][echo.go:48] 2023/11/14 22:17:14 Connection close
+[INFO][echo.go:48] 2023/11/14 22:17:14 Connection close
+[INFO][server.go:41] 2023/11/14 22:18:15 shutting down
+[INFO][echo.go:63] 2023/11/14 22:18:15 handler shutting down
