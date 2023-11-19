@@ -1,0 +1,9 @@
+[INFO][server.go:33] 2023/11/19 19:54:25 start listen
+[INFO][server.go:56] 2023/11/19 19:54:56 accepted link
+[INFO][server.go:56] 2023/11/19 19:54:56 accepted link
+[INFO][handler.go:55] 2023/11/19 19:55:07 connection closed: [::1]:62998
+[INFO][server.go:56] 2023/11/19 19:55:09 accepted link
+[INFO][handler.go:55] 2023/11/19 19:56:23 connection closed: [::1]:63026
+[INFO][handler.go:55] 2023/11/19 19:57:13 connection closed: [::1]:62999
+[INFO][server.go:41] 2023/11/19 19:57:18 shutting down
+[INFO][handler.go:87] 2023/11/19 19:57:18 handler shutting down

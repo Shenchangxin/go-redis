@@ -1,0 +1,11 @@
+[INFO][server.go:33] 2023/11/19 17:31:55 start listen
+[INFO][server.go:41] 2023/11/19 17:32:19 shutting down
+[INFO][handler.go:87] 2023/11/19 17:32:19 handler shutting down
+[INFO][handler.go:87] 2023/11/19 17:32:19 handler shutting down
+[INFO][server.go:33] 2023/11/19 17:43:24 start listen
+[INFO][server.go:41] 2023/11/19 17:43:29 shutting down
+[INFO][handler.go:87] 2023/11/19 17:43:29 handler shutting down
+[INFO][server.go:33] 2023/11/19 17:51:41 start listen
+[INFO][server.go:41] 2023/11/19 17:51:46 shutting down
+[INFO][handler.go:87] 2023/11/19 17:51:46 handler shutting down
+[INFO][handler.go:87] 2023/11/19 17:51:46 handler shutting down
