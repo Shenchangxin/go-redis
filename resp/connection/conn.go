@@ -1,6 +1,7 @@
 package connection
 
 import (
+	"bytes"
 	"go-redis/lib/sync/wait"
 	"net"
 	"sync"
@@ -51,4 +52,22 @@ func (c *Connection) GetDBIndex() int {
 
 func (c *Connection) SelectDB(dbNum int) {
 	c.selectedDB = dbNum
+}
+
+type FakeConn struct {
+	Connection
+	buf bytes.Buffer
+}
+
+func (c *FakeConn) Write(b []byte) error {
+	c.buf.Write(b)
+	return nil
+}
+
+func (c *FakeConn) Clean() {
+	c.buf.Reset()
+}
+
+func (c *FakeConn) Bytes() []byte {
+	return c.buf.Bytes()
 }

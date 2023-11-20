@@ -2,6 +2,7 @@ package database
 
 import (
 	"github.com/hdt3213/godis/lib/logger"
+	"go-redis/aof"
 	"go-redis/config"
 	"go-redis/interface/resp"
 	"go-redis/resp/reply"
@@ -10,7 +11,8 @@ import (
 )
 
 type Database struct {
-	dbSet []*DB
+	dbSet      []*DB
+	aofHandler *aof.AofHandler
 }
 
 func NewDatabase() *Database {
@@ -23,6 +25,19 @@ func NewDatabase() *Database {
 		db := makeDB()
 		db.index = i
 		database.dbSet[i] = db
+	}
+	if config.Properties.AppendOnly {
+		aofHandler, err := aof.NewAOFHandler(database)
+		if err != nil {
+			panic(err)
+		}
+		database.aofHandler = aofHandler
+		for _, db := range database.dbSet {
+			sdb := db //解决闭包问题
+			sdb.addAof = func(line CmdLine) {
+				database.aofHandler.AddAof(sdb.index, line)
+			}
+		}
 	}
 	return database
 }
